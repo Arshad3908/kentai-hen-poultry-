@@ -1,0 +1,258 @@
+/* Reset some default styles */
+body, figure, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation */
+nav {
+    background-color: #F8D17A;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+.menu a:hover{
+    color: forestgreen;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+    position: relative;
+    z-index: 101;
+}
+
+.bar {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    transition: transform 0.3s;
+}
+
+/* Header */
+header {
+    height: 100vh;
+    background-image: url('header.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #F8D17A;
+    color: #fff;
+}
+
+/* About section */
+#about {
+    background-color: #F5F5F5;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.img-about {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+/* Products section */
+#products {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    }
+    
+    .product-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    }
+    
+    .product-item img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+    }
+    
+    .product-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    }
+    
+    .product-item p {
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 20px;
+    }
+    
+    .product-item .btn {
+    background-color: #F8D17A;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    }
+    
+    .product-item .btn:hover {
+    background-color: #ffbf3f;
+    }
+    
+    /* Footer */
+    footer {
+    background-color: #F8D17A;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    }
+    
+    .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    }
+    
+    .footer-links li {
+    margin-right: 10px;
+    }
+    
+    .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    }
+    
+    /* Media Queries */
+    @media (max-width: 768px) {
+    .logo {
+    margin-right: 10px;
+    }
+    
+    css
+    Copy code
+    .menu {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #F8D17A;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 20px;
+        z-index: 100;
+    }
+    
+    .menu li {
+        margin-bottom: 20px;
+    }
+    
+    .menu a {
+        color: #fff;
+        font-size: 24px;
+    }
+    
+    .bar.active {
+        transform: rotate(45deg);
+        background-color: #fff;
+    }
+    
+    .bar.active:before, .bar.active:after {
+        transform: rotate(-90deg);
+        background-color: #fff;
+    }
+    
+    .bar:before, .bar:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        transition: transform 0.3s;
+    }
+    }
